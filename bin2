@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void print_binary(unsigned int num) {
+    if (num > 1) {
+        print_binary(num / 2);
+    }
+    printf("%d", num % 2);
+}
+
+int main() {
+    unsigned int num = 42;
+    printf("Decimal: %u\nBinary: ", num);
+    print_binary(num);
+    printf("\n");
+    return 0;
+}
+
