@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * handle_print - main entry point
  * @list: list of arguments 
@@ -22,7 +21,7 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[], int fla
 		{'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
 	};
 	for (a = 0; fmt_types[a].fmt != '\0'; a++)
-		if (fmt[*ind] == fmt_types[i].fmt)
+		if (fmt[*ind] == fmt_types[a].fmt)
 		{
 			return (fmt_types[a].fn(list, buffer, flags, width, precision, size));
 		}
