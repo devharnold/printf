@@ -128,16 +128,16 @@ int print_non_printable(va_list types, char buffer[], int flags, int width, int 
 	{
 		if (is_printable(str[i]))
 	{
-			buffer[offset +i] = str[i];
+			buffer[off_t +i] = str[i];
 	}
 		else
 	{
-			offset += append_hexa_code(str[i], buffer, i + offset);
+			off_t += append_hexa_code(str[i], buffer, i + offset);
 	}
 		i++;
 	}
-	buffer[i + offset] = '\0';
-	return (write(1, buffer, i + offset));
+	buffer[i + off_t] = '\0';
+	return (write(1, buffer, i + off_t));
 }
 
 /*** PRINT REVERSE ***/
