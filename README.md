@@ -21,7 +21,7 @@ b: the unsigned int argument is converted to binary
 Handle the following conversion specifiers:                                         
 Handle the following conversion specifiers:
 
-u
+
 o
 x
 X
